@@ -42,11 +42,11 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-24 lg:py-32 bg-white">
+    <section id="services" className="py-12 lg:py-16 bg-white">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-brand-navy mb-6">
+        <div className="text-center max-w-3xl mx-auto mb-10">
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-brand-navy mb-4">
             Our Moving Services
           </h2>
           <p className="font-body text-lg md:text-xl text-gray-600">
@@ -56,7 +56,7 @@ const Services = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
@@ -64,8 +64,8 @@ const Services = () => {
                 key={index}
                 className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer border-2 border-gray-100 hover:border-brand-orange"
               >
-                <CardContent className="p-8">
-                  <div className={`${service.color} w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                <CardContent className="p-6">
+                  <div className={`${service.color} w-16 h-16 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300`}>
                     <Icon className="w-8 h-8" />
                   </div>
                   <h3 className="font-display text-2xl font-bold text-brand-navy mb-3 group-hover:text-brand-orange transition-colors">
@@ -85,8 +85,8 @@ const Services = () => {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-16">
-          <p className="font-body text-lg text-gray-600 mb-6">
+        <div className="text-center mt-10">
+          <p className="font-body text-lg text-gray-600 mb-4">
             Don't see what you're looking for? We offer customized solutions.
           </p>
           <button

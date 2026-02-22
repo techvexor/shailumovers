@@ -43,40 +43,28 @@ const testimonials = [
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   useEffect(() => {
-    if (!isAutoPlaying) return;
-
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
+    }, 3000); // Auto-slide every 3 seconds
 
     return () => clearInterval(interval);
-  }, [isAutoPlaying]);
+  }, []);
 
   const nextTestimonial = () => {
-    setIsAutoPlaying(false);
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
   };
 
   const prevTestimonial = () => {
-    setIsAutoPlaying(false);
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <section id="testimonials" className="py-24 lg:py-32 bg-gradient-to-br from-brand-navy via-[#1e3a5f] to-brand-navy relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-        }}></div>
-      </div>
-
-      <div className="container relative z-10 mx-auto px-4 lg:px-8">
+    <section id="testimonials" className="py-24 lg:py-32">
+      <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-6">
@@ -87,37 +75,37 @@ const Testimonials = () => {
           </p>
         </div>
 
-        {/* Main Testimonial Card */}
-        <div className="max-w-4xl mx-auto">
-          <Card className="bg-white/95 backdrop-blur-sm border-none shadow-2xl">
-            <CardContent className="p-8 lg:p-12">
+        {/* Main Testimonial Card - Smaller */}
+        <div className="max-w-2xl mx-auto">
+          <Card className="bg-white/95 backdrop-blur-sm border-none shadow-xl">
+            <CardContent className="p-6 lg:p-8">
               {/* Quote Icon */}
-              <Quote className="w-16 h-16 text-brand-orange/20 mb-6" />
+              <Quote className="w-10 h-10 text-brand-orange/20 mb-4" />
 
               {/* Stars */}
-              <div className="flex gap-1 mb-6">
+              <div className="flex gap-1 mb-4">
                 {[...Array(currentTestimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-6 h-6 fill-brand-orange text-brand-orange" />
+                  <Star key={i} className="w-4 h-4 fill-brand-orange text-brand-orange" />
                 ))}
               </div>
 
               {/* Testimonial Text */}
-              <p className="font-body text-xl md:text-2xl text-gray-700 leading-relaxed mb-8 italic">
+              <p className="font-body text-base md:text-lg text-gray-700 leading-relaxed mb-6 italic">
                 "{currentTestimonial.text}"
               </p>
 
               {/* Customer Info */}
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-3">
                 <img
                   src={currentTestimonial.image}
                   alt={currentTestimonial.name}
-                  className="w-16 h-16 rounded-full object-cover border-4 border-brand-orange/20"
+                  className="w-12 h-12 rounded-full object-cover border-2 border-brand-orange/20"
                 />
                 <div>
-                  <div className="font-display text-xl font-bold text-brand-navy">
+                  <div className="font-display text-base font-bold text-brand-navy">
                     {currentTestimonial.name}
                   </div>
-                  <div className="font-body text-gray-600">
+                  <div className="font-body text-sm text-gray-600">
                     {currentTestimonial.location}
                   </div>
                 </div>
@@ -141,10 +129,7 @@ const Testimonials = () => {
               {testimonials.map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => {
-                    setIsAutoPlaying(false);
-                    setCurrentIndex(index);
-                  }}
+                  onClick={() => setCurrentIndex(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
                     index === currentIndex
                       ? "bg-brand-orange w-8"

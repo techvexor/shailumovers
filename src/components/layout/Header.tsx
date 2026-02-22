@@ -1,9 +1,11 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, Phone, X, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
 
   const navigation = [
     { name: "Services", href: "#services" },
@@ -25,6 +27,20 @@ const Header = () => {
                   Shailu Movers
                 </span>
               </a>
+            </div>
+
+            {/* Search Bar - After Logo */}
+            <div className="hidden md:flex items-center flex-1 max-w-md mx-4 lg:mx-6">
+              <div className="relative w-full">
+                <Input
+                  type="text"
+                  placeholder="Search services..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full bg-gray-100 border-0 rounded-full pl-4 pr-10 py-2 text-sm placeholder-gray-500 focus:bg-white transition-colors"
+                />
+                <Search className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
+              </div>
             </div>
 
             {/* Desktop Navigation */}
@@ -66,6 +82,19 @@ const Header = () => {
         {mobileMenuOpen && (
           <div className="lg:hidden border-t border-gray-200 bg-white">
             <div className="container mx-auto px-4 py-6 space-y-4">
+              {/* Mobile Search Bar */}
+              <div className="mb-4">
+                <div className="relative w-full">
+                  <Input
+                    type="text"
+                    placeholder="Search services..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full bg-gray-100 border-0 rounded-full pl-4 pr-10 py-2 text-sm placeholder-gray-500 focus:bg-white transition-colors"
+                  />
+                  <Search className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
+                </div>
+              </div>
               {navigation.map((item) => (
                 <a
                   key={item.name}
@@ -79,7 +108,7 @@ const Header = () => {
               <div className="pt-4 space-y-3">
                 <Button
                   variant="outline"
-                  className="w-full border-2 border-brand-navy text-brand-navy hover:bg-brand-navy hover:text-white font-semibold h-14"
+                  className="w-full border-2 border-brand-navy text-black hover:bg-brand-navy hover:text-white font-semibold h-14"
                   onClick={() => window.location.href = "tel:+917011638761"}
                 >
                   <Phone className="w-5 h-5 mr-2" />

@@ -87,7 +87,7 @@ const Hero = () => {
       {/* Main Content */}
       <div className="relative z-10 flex items-center min-h-screen">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="max-w-3xl space-y-6">
+          <div className="max-w-3xl space-y-5">
             {/* Location Badge */}
             <div
               key={`badge-${textKey}`}
@@ -113,7 +113,7 @@ const Hero = () => {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-3 pt-2">
+            <div className="flex flex-wrap gap-3 pt-1">
               <Button
                 size="lg"
                 className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold h-14 px-8 text-base shadow-2xl shadow-orange-500/30 hover:shadow-orange-500/50 transition-all duration-300 hover:scale-105 group rounded-full"
@@ -153,7 +153,7 @@ const Hero = () => {
             </div>
 
             {/* Trust Row */}
-            <div className="flex items-center gap-8 pt-6">
+            <div className="flex items-center gap-8 pt-4">
               <div className="text-center">
                 <div className="font-display text-3xl font-bold text-brand-orange">500+</div>
                 <div className="font-body text-xs text-white/60 uppercase tracking-wider">

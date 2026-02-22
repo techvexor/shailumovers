@@ -4,7 +4,7 @@ import Services from "./sections/Services";
 import WhyChooseUs from "./sections/WhyChooseUs";
 import ProcessTimeline from "./sections/ProcessTimeline";
 import About from "./sections/About";
-import Testimonials from "./sections/Testimonials";
+
 import ServiceAreas from "./sections/ServiceAreas";
 import FAQ from "./sections/FAQ";
 import QuoteForm from "./sections/QuoteForm";
@@ -20,7 +20,6 @@ function Home() {
       <WhyChooseUs />
       <ProcessTimeline />
       <About />
-      <Testimonials />
       <ServiceAreas />
       <FAQ />
       <QuoteForm />

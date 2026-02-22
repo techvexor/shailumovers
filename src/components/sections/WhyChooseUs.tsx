@@ -33,11 +33,11 @@ const features = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="py-24 lg:py-32 bg-gradient-to-br from-brand-cream via-white to-brand-cream">
+    <section className="py-12 lg:py-16 bg-gradient-to-br from-brand-cream via-white to-brand-cream">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-brand-navy mb-6">
+        <div className="text-center max-w-3xl mx-auto mb-10">
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-brand-navy mb-4">
             Why Choose Shailu Movers?
           </h2>
           <p className="font-body text-lg md:text-xl text-gray-600">
@@ -46,7 +46,7 @@ const WhyChooseUs = () => {
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
@@ -60,9 +60,9 @@ const WhyChooseUs = () => {
                 </div>
 
                 {/* Content */}
-                <div className="relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-brand-orange">
+                <div className="relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-brand-orange">
                   {/* Icon */}
-                  <div className="bg-gradient-to-br from-brand-orange to-orange-600 w-16 h-16 rounded-xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <div className="bg-gradient-to-br from-brand-orange to-orange-600 w-16 h-16 rounded-xl flex items-center justify-center mb-5 shadow-lg group-hover:scale-110 transition-transform duration-300">
                     <Icon className="w-8 h-8 text-white" />
                   </div>
 
@@ -89,27 +89,6 @@ const WhyChooseUs = () => {
           })}
         </div>
 
-        {/* Bottom Stats Bar */}
-        <div className="mt-20 bg-gradient-to-r from-brand-navy to-[#1e3a5f] rounded-3xl p-8 lg:p-12 shadow-2xl">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-            <div className="border-r border-white/20 last:border-r-0">
-              <div className="font-display text-4xl lg:text-5xl font-bold text-brand-orange mb-2">2,847</div>
-              <div className="font-body text-white/90">Successful Moves</div>
-            </div>
-            <div className="border-r border-white/20 last:border-r-0">
-              <div className="font-display text-4xl lg:text-5xl font-bold text-brand-orange mb-2">15+</div>
-              <div className="font-body text-white/90">Years Experience</div>
-            </div>
-            <div className="border-r border-white/20 last:border-r-0">
-              <div className="font-display text-4xl lg:text-5xl font-bold text-brand-orange mb-2">25+</div>
-              <div className="font-body text-white/90">Professional Team</div>
-            </div>
-            <div>
-              <div className="font-display text-4xl lg:text-5xl font-bold text-brand-orange mb-2">10+</div>
-              <div className="font-body text-white/90">Modern Vehicles</div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
