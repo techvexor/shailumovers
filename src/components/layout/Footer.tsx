@@ -131,7 +131,7 @@ const Footer = () => {
                 <Phone className="w-5 h-5 mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" />
                 <div>
                   <div className="font-mono font-semibold text-lg text-white">+91 7011638761</div>
-                  <div className="text-sm">24/7 Customer Support</div>
+                  <div className="text-sm">Call & WhatsApp</div>
                 </div>
               </a>
               <a
@@ -147,7 +147,7 @@ const Footer = () => {
               <div className="flex items-start gap-3 font-body text-gray-300">
                 <MapPin className="w-5 h-5 mt-1 flex-shrink-0" />
                 <div>
-                  <div className="text-white">Sector 101, Noida, UP</div>
+                  <div className="text-white">Sector 101, Noida, UP, IN</div>
                   <div className="text-sm">Services Area: Noida, Greater Noida, Delhi NCR</div>
                 </div>
               </div>

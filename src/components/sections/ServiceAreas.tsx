@@ -19,18 +19,18 @@ const serviceAreas = [
   },
   {
     city: "Gurgaon",
-    areas: ["DLF Phase", "Sector 31", "Sector 12", "Cyber Hub\", \"MG Road\"],
-    image: \"https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80\",
+    areas: ["DLF Phase", "Sector 31", "Sector 12", "Cyber Hub", "MG Road"],
+    image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80",
   },
   {
-    city: "Faridabad\",
-    areas: [\"Sector 7\", \"Sector 15\", \"Sector 16\", \"Old City\", \"Escorts Chowk\"],
-    image: \"https://images.unsplash.com/photo-1587474260584-136574528ed5?w=600&q=80\",
+    city: "Faridabad",
+    areas: ["Sector 7", "Sector 15", "Sector 16", "Old City", "Escorts Chowk"],
+    image: "https://images.unsplash.com/photo-1587474260584-136574528ed5?w=600&q=80",
   },
   {
-    city: \"Ghaziabad\",
-    areas: [\"Raj Nagar\", \"Indirapuram\", \"Vaishali\", \"Kavi Nagar\", \"Vasundhara\"],
-    image: \"https://images.unsplash.com/photo-1596176530529-78163a4f7af2?w=600&q=80\",
+    city: "Ghaziabad",
+    areas: ["Raj Nagar", "Indirapuram", "Vaishali", "Kavi Nagar", "Vasundhara"],
+    image: "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?w=600&q=80",
   },
 ];
 

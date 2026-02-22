@@ -30,6 +30,9 @@ dist-ssr
 
 core
 
-.github/
+# Tempo canvas-only folders (not part of your shipped app)
+**/tempobook/dynamic/
+**/tempobook/storyboards/
 
-**/tempobook/**
+# Keep pages config (used by Tempo) under version control
+!**/tempobook/pages/**
