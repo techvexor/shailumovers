@@ -30,11 +30,11 @@ const steps = [
 
 const ProcessTimeline = () => {
   return (
-    <section className="py-24 lg:py-32 bg-white">
+    <section className="py-12 lg:py-16 bg-white">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-brand-navy mb-6">
+        <div className="text-center max-w-3xl mx-auto mb-10">
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-brand-navy mb-4">
             How It Works
           </h2>
           <p className="font-body text-lg md:text-xl text-gray-600">
@@ -47,13 +47,13 @@ const ProcessTimeline = () => {
           {/* Connection Line */}
           <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-brand-teal via-brand-orange to-brand-teal transform -translate-y-1/2 z-0"></div>
 
-          <div className="relative z-10 grid grid-cols-5 gap-8">
+          <div className="relative z-10 grid grid-cols-5 gap-6">
             {steps.map((step, index) => {
               const Icon = step.icon;
               return (
                 <div key={index} className="flex flex-col items-center text-center group">
                   {/* Icon Circle */}
-                  <div className="relative mb-6">
+                  <div className="relative mb-5">
                     <div className="w-24 h-24 rounded-full bg-gradient-to-br from-brand-orange to-orange-600 flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300 border-4 border-white">
                       <Icon className="w-10 h-10 text-white" />
                     </div>
@@ -77,7 +77,7 @@ const ProcessTimeline = () => {
         </div>
 
         {/* Mobile Timeline */}
-        <div className="lg:hidden space-y-8">
+        <div className="lg:hidden space-y-6">
           {steps.map((step, index) => {
             const Icon = step.icon;
             return (
@@ -113,12 +113,12 @@ const ProcessTimeline = () => {
         </div>
 
         {/* CTA Box */}
-        <div className="mt-20 bg-gradient-to-r from-brand-cream to-white rounded-3xl p-8 lg:p-12 border-2 border-brand-orange/20">
+        <div className="mt-10 bg-gradient-to-r from-brand-cream to-white rounded-3xl p-6 lg:p-8 border-2 border-brand-orange/20">
           <div className="text-center max-w-2xl mx-auto">
             <h3 className="font-display text-3xl font-bold text-brand-navy mb-4">
               Ready to Get Started?
             </h3>
-            <p className="font-body text-lg text-gray-600 mb-8">
+            <p className="font-body text-lg text-gray-600 mb-6">
               Get your personalized moving quote in less than 60 seconds. No hidden charges, no obligations.
             </p>
             <button

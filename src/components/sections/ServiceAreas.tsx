@@ -36,11 +36,11 @@ const serviceAreas = [
 
 const ServiceAreas = () => {
   return (
-    <section id="areas" className="py-24 lg:py-32 bg-gradient-to-br from-brand-cream via-white to-brand-cream">
+    <section id="areas" className="py-12 lg:py-16 bg-gradient-to-br from-brand-cream via-white to-brand-cream">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-brand-navy mb-6">
+        <div className="text-center max-w-3xl mx-auto mb-10">
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-brand-navy mb-4">
             Service Areas
           </h2>
           <p className="font-body text-lg md:text-xl text-gray-600">
@@ -50,7 +50,7 @@ const ServiceAreas = () => {
         </div>
 
         {/* Areas Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
           {serviceAreas.map((area, index) => (
             <Card
               key={index}
@@ -96,8 +96,8 @@ const ServiceAreas = () => {
         </div>
 
         {/* SEO Content Block */}
-        <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-lg border-2 border-gray-100 max-w-5xl mx-auto">
-          <h3 className="font-display text-3xl font-bold text-brand-navy mb-6 text-center">
+        <div className="bg-white rounded-3xl p-6 lg:p-8 shadow-lg border-2 border-gray-100 max-w-5xl mx-auto">
+          <h3 className="font-display text-3xl font-bold text-brand-navy mb-5 text-center">
             Comprehensive Moving Services Across India
           </h3>
           <div className="font-body text-gray-700 leading-relaxed space-y-4">
@@ -120,7 +120,7 @@ const ServiceAreas = () => {
           </div>
 
           {/* Coverage Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8 pt-8 border-t border-gray-200">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-6 pt-6 border-t border-gray-200">
             <div className="text-center">
               <div className="font-display text-3xl font-bold text-brand-orange mb-1">50+</div>
               <div className="font-body text-sm text-gray-600">Cities Covered</div>
@@ -141,8 +141,8 @@ const ServiceAreas = () => {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-16">
-          <p className="font-body text-lg text-gray-600 mb-6">
+        <div className="text-center mt-10">
+          <p className="font-body text-lg text-gray-600 mb-4">
             Don't see your location? We're always expanding our services.
           </p>
           <button

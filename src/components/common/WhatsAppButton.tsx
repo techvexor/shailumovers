@@ -23,13 +23,13 @@ const WhatsAppButton = () => {
   return (
     <button
       onClick={handleClick}
-      className={`hidden lg:flex fixed bottom-8 right-8 z-50 w-16 h-16 bg-[#25D366] hover:bg-[#25D366]/90 rounded-full items-center justify-center shadow-2xl hover:shadow-[#25D366]/50 transition-all duration-300 hover:scale-110 group ${
+      className={`hidden lg:flex fixed bottom-8 right-8 z-50 w-14 h-14 bg-[#25D366] hover:bg-[#25D366]/90 rounded-full items-center justify-center shadow-2xl hover:shadow-[#25D366]/50 transition-all duration-300 hover:scale-110 group ${
         isPulsing ? 'animate-pulse' : ''
       }`}
       aria-label="Chat on WhatsApp"
     >
       <svg 
-        className="w-8 h-8 text-white" 
+        className="w-6 h-6 text-white" 
         viewBox="0 0 24 24" 
         fill="currentColor"
       >

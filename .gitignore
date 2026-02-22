@@ -25,14 +25,12 @@ dist-ssr
 
 !node_modules/.vite
 
-**/tempobook/dynamic/
-**/tempobook/storyboards/
-
-core
-
 # Tempo canvas-only folders (not part of your shipped app)
 **/tempobook/dynamic/
 **/tempobook/storyboards/
 
 # Keep pages config (used by Tempo) under version control
 !**/tempobook/pages/**
+
+# Ignore the rest of Tempo's generated canvas files
+**/tempobook/**

@@ -1,6 +1,55 @@
+import { useState, useEffect } from "react";
 import { Target, Eye, Award, Users } from "lucide-react";
 
 const About = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const equipmentCards = [
+    {
+      title: "Modern Fleet",
+      description: "10+ GPS-tracked trucks of various sizes to handle any move.",
+      image: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=600&q=80",
+      alt: "Moving trucks"
+    },
+    {
+      title: "Quality Materials",
+      description: "Premium packing supplies to protect your valuables.",
+      image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80",
+      alt: "Packing materials"
+    },
+    {
+      title: "Safety Equipment",
+      description: "Professional tools for safe loading and handling.",
+      image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80",
+      alt: "Professional tools"
+    },
+    {
+      title: "Climate Control",
+      description: "Temperature-controlled storage units for sensitive items.",
+      image: "https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c?w=600&q=80",
+      alt: "Climate control storage"
+    },
+    {
+      title: "Insurance Coverage",
+      description: "Full coverage insurance on all items during transit.",
+      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80",
+      alt: "Insurance coverage"
+    },
+    {
+      title: "Heavy Equipment",
+      description: "Specialized equipment for handling heavy and fragile items.",
+      image: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&q=80",
+      alt: "Heavy equipment"
+    }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % equipmentCards.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [equipmentCards.length]);
+
   return (
     <section id="about" className="py-24 lg:py-32 bg-white">
       <div className="container mx-auto px-4 lg:px-8">
@@ -103,44 +152,6 @@ const About = () => {
           </div>
         </div>
 
-        {/* Team Section */}
-        <div className="text-center mb-12">
-          <h3 className="font-display text-4xl font-bold text-brand-navy mb-4">
-            Meet Our Team
-          </h3>
-          <p className="font-body text-lg text-gray-600 max-w-2xl mx-auto">
-            Our experienced professionals are the backbone of our success. 
-            Every team member is trained, background-verified, and committed to excellence.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {[
-            { name: "Shailu Kumar", role: "Founder & CEO", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80" },
-            { name: "Priya Sharma", role: "Operations Head", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80" },
-            { name: "Rajesh Patel", role: "Fleet Manager", image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80" },
-            { name: "Anjali Singh", role: "Customer Success", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80" },
-          ].map((member, index) => (
-            <div
-              key={index}
-              className="group cursor-pointer"
-            >
-              <div className="relative overflow-hidden rounded-2xl mb-4">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </div>
-              <h4 className="font-display text-xl font-bold text-brand-navy mb-1">
-                {member.name}
-              </h4>
-              <p className="font-body text-gray-600">{member.role}</p>
-            </div>
-          ))}
-        </div>
-
         {/* Equipment Showcase */}
         <div className="mt-24">
           <div className="text-center mb-12">
@@ -153,53 +164,65 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
-              <img
-                src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=600&q=80"
-                alt="Moving trucks"
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-6 bg-white">
-                <h4 className="font-display text-xl font-bold text-brand-navy mb-2">
-                  Modern Fleet
-                </h4>
-                <p className="font-body text-gray-600">
-                  10+ GPS-tracked trucks of various sizes to handle any move.
-                </p>
+          <div className="relative">
+            {/* Main carousel container */}
+            <div className="overflow-hidden rounded-2xl">
+              <div
+                className="flex transition-transform duration-500 ease-out"
+                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+              >
+                {equipmentCards.map((card, index) => (
+                  <div
+                    key={index}
+                    className="w-full flex-shrink-0"
+                  >
+                    <div className="rounded-2xl overflow-hidden shadow-lg">
+                      <img
+                        src={card.image}
+                        alt={card.alt}
+                        className="w-full h-64 object-cover"
+                      />
+                      <div className="p-6 bg-white">
+                        <h4 className="font-display text-xl font-bold text-brand-navy mb-2">
+                          {card.title}
+                        </h4>
+                        <p className="font-body text-gray-600">
+                          {card.description}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
 
-            <div className="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
-              <img
-                src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80"
-                alt="Packing materials"
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-6 bg-white">
-                <h4 className="font-display text-xl font-bold text-brand-navy mb-2">
-                  Quality Materials
-                </h4>
-                <p className="font-body text-gray-600">
-                  Premium packing supplies to protect your valuables.
-                </p>
-              </div>
-            </div>
+            {/* Navigation Buttons */}
+            <button
+              onClick={() => setCurrentSlide((prev) => (prev - 1 + equipmentCards.length) % equipmentCards.length)}
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 md:-translate-x-16 z-10 bg-brand-navy text-white p-2 md:p-3 rounded-full hover:bg-brand-navy/80 transition-colors"
+            >
+              ←
+            </button>
+            <button
+              onClick={() => setCurrentSlide((prev) => (prev + 1) % equipmentCards.length)}
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 md:translate-x-16 z-10 bg-brand-navy text-white p-2 md:p-3 rounded-full hover:bg-brand-navy/80 transition-colors"
+            >
+              →
+            </button>
 
-            <div className="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
-              <img
-                src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80"
-                alt="Professional tools"
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-6 bg-white">
-                <h4 className="font-display text-xl font-bold text-brand-navy mb-2">
-                  Safety Equipment
-                </h4>
-                <p className="font-body text-gray-600">
-                  Professional tools for safe loading and handling.
-                </p>
-              </div>
+            {/* Dots Indicator */}
+            <div className="flex justify-center gap-2 mt-6">
+              {equipmentCards.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-2 h-2 rounded-full transition-colors ${
+                    index === currentSlide
+                      ? "bg-brand-navy"
+                      : "bg-gray-300 hover:bg-gray-400"
+                  }`}
+                />
+              ))}
             </div>
           </div>
         </div>

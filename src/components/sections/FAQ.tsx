@@ -50,11 +50,11 @@ const faqs = [
 
 const FAQ = () => {
   return (
-    <section className="py-24 lg:py-32 bg-white">
+    <section className="py-12 lg:py-16 bg-white">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-brand-navy mb-6">
+        <div className="text-center max-w-3xl mx-auto mb-10">
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-brand-navy mb-4">
             Frequently Asked Questions
           </h2>
           <p className="font-body text-lg md:text-xl text-gray-600">
@@ -64,17 +64,17 @@ const FAQ = () => {
 
         {/* FAQ Accordion */}
         <div className="max-w-4xl mx-auto">
-          <Accordion type="single" collapsible className="space-y-4">
+          <Accordion type="single" collapsible className="space-y-3">
             {faqs.map((faq, index) => (
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
                 className="bg-brand-cream border-2 border-gray-100 rounded-xl px-6 hover:border-brand-orange transition-colors duration-300"
               >
-                <AccordionTrigger className="font-display text-lg md:text-xl font-semibold text-brand-navy hover:text-brand-orange py-6 hover:no-underline">
+                <AccordionTrigger className="font-display text-lg md:text-xl font-semibold text-brand-navy hover:text-brand-orange py-5 hover:no-underline">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="font-body text-gray-700 text-base md:text-lg leading-relaxed pb-6">
+                <AccordionContent className="font-body text-gray-700 text-base md:text-lg leading-relaxed pb-5">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -83,11 +83,11 @@ const FAQ = () => {
         </div>
 
         {/* Still Have Questions CTA */}
-        <div className="mt-16 text-center bg-gradient-to-r from-brand-teal/10 to-brand-orange/10 rounded-3xl p-8 lg:p-12 max-w-4xl mx-auto border-2 border-brand-teal/20">
+        <div className="mt-10 text-center bg-gradient-to-r from-brand-teal/10 to-brand-orange/10 rounded-3xl p-6 lg:p-8 max-w-4xl mx-auto border-2 border-brand-teal/20">
           <h3 className="font-display text-2xl md:text-3xl font-bold text-brand-navy mb-4">
             Still Have Questions?
           </h3>
-          <p className="font-body text-lg text-gray-600 mb-6">
+          <p className="font-body text-lg text-gray-600 mb-4">
             Our team is here to help 24/7. Get in touch and we'll answer all your queries.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

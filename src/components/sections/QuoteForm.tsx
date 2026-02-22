@@ -55,7 +55,7 @@ const QuoteForm = () => {
 
   if (submitted) {
     return (
-      <section id="quote-form" className="py-24 lg:py-32 bg-gradient-to-br from-brand-cream via-white to-brand-cream">
+      <section id="quote-form" className="py-12 lg:py-16 bg-gradient-to-br from-brand-cream via-white to-brand-cream">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-2xl mx-auto text-center">
             <div className="bg-white rounded-3xl p-12 shadow-2xl border-2 border-brand-orange/20">
@@ -95,8 +95,8 @@ const QuoteForm = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-12">
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-brand-navy mb-6">
+          <div className="text-center mb-8">
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-brand-navy mb-4">
               Get Your Free Quote
             </h2>
             <p className="font-body text-lg md:text-xl text-gray-600">
@@ -106,8 +106,8 @@ const QuoteForm = () => {
           </div>
 
           {/* Form */}
-          <form onSubmit={handleSubmit} className="bg-white rounded-3xl p-8 lg:p-12 shadow-2xl border-2 border-gray-100">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <form onSubmit={handleSubmit} className="bg-white rounded-3xl p-6 lg:p-8 shadow-2xl border-2 border-gray-100">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               {/* Name */}
               <div className="space-y-2">
                 <Label htmlFor="name" className="text-brand-navy font-semibold">
@@ -254,7 +254,7 @@ const QuoteForm = () => {
             </div>
 
             {/* Submit Button */}
-            <div className="mt-8">
+            <div className="mt-6">
               <Button
                 type="submit"
                 className="w-full bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold h-16 text-lg shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105"
@@ -268,7 +268,7 @@ const QuoteForm = () => {
           </form>
 
           {/* Trust Badges */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8 text-center">
             <div>
               <div className="text-brand-teal font-display text-2xl font-bold mb-1">✓</div>
               <div className="text-sm text-gray-600">No Hidden Charges</div>
