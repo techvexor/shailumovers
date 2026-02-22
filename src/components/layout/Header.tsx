@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Header = () => {
@@ -42,20 +42,6 @@ const Header = () => {
 
             {/* Desktop CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
-              <Button
-                variant="outline"
-                className="border-2 border-brand-navy text-brand-navy hover:bg-brand-navy hover:text-white font-semibold h-14 px-6"
-                onClick={() => window.location.href = "tel:+917011638761"}
-              >
-                <Phone className="w-5 h-5 mr-2" />
-                Call Now
-              </Button>
-              <Button
-                className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold h-14 px-8 shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105"
-                onClick={() => document.getElementById('quote-form')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Get Free Quote
-              </Button>
             </div>
 
             {/* Mobile menu button */}
