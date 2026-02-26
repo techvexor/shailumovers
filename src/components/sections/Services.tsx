@@ -7,36 +7,42 @@ const services = [
     title: "Home Shifting",
     description: "Complete household relocation with careful packing and safe transport of all belongings.",
     color: "bg-orange-50 text-brand-orange",
+    link: "/home-shifting",
   },
   {
     icon: Building2,
     title: "Office Relocation",
     description: "Professional office moving services with minimal downtime for your business.",
     color: "bg-blue-50 text-brand-teal",
+    link: "/office-relocation",
   },
   {
     icon: Package,
     title: "Packing Services",
     description: "Expert packing with quality materials to ensure the safety of your items.",
     color: "bg-purple-50 text-purple-600",
+    link: "/packing-services",
   },
   {
     icon: Truck,
     title: "Local Transport",
     description: "Reliable local delivery and transport services for goods of all sizes.",
     color: "bg-green-50 text-green-600",
+    link: "/local-transport",
   },
   {
     icon: Users,
     title: "Loading & Unloading",
     description: "Professional team for safe loading, transport, and unloading of your items.",
     color: "bg-pink-50 text-pink-600",
+    link: "/loading-unloading",
   },
   {
     icon: Shield,
     title: "Storage Solutions",
     description: "Secure temporary storage facilities for your belongings during transition.",
     color: "bg-indigo-50 text-indigo-600",
+    link: "/storage-solutions",
   },
 ];
 
@@ -74,10 +80,10 @@ const Services = () => {
                   <p className="font-body text-gray-600 mb-4 leading-relaxed">
                     {service.description}
                   </p>
-                  <button className="inline-flex items-center text-brand-orange font-semibold group-hover:gap-2 transition-all">
+                  <a href={service.link} className="inline-flex items-center text-brand-orange font-semibold group-hover:gap-2 transition-all">
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                  </button>
+                  </a>
                 </CardContent>
               </Card>
             );
@@ -91,7 +97,7 @@ const Services = () => {
           </p>
           <button
             className="inline-flex items-center font-body font-semibold text-brand-navy hover:text-brand-orange text-lg border-b-2 border-brand-navy hover:border-brand-orange transition-colors pb-1"
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => window.location.href = '/contact'}
           >
             Contact us for custom requirements
             <ArrowRight className="w-5 h-5 ml-2" />
