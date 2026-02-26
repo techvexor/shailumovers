@@ -1,18 +1,20 @@
-import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, Linkedin, ArrowRight } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer id="contact" className="bg-gradient-to-br from-brand-navy via-[#1e3a5f] to-brand-navy text-white pt-20 pb-8">
+    <footer className="bg-gradient-to-br from-brand-navy via-[#1e3a5f] to-brand-navy text-white pt-20 pb-8">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
           <div>
-            <h3 className="font-display text-3xl font-bold mb-6">
-              Shailu Movers
-            </h3>
+            <a href="/" className="inline-block">
+              <h3 className="font-display text-3xl font-bold mb-6">
+                Shailu Movers
+              </h3>
+            </a>
             <p className="font-body text-gray-300 mb-6 leading-relaxed">
               Your trusted partner for stress-free home shifting and transport services. 
               Safe, reliable, and affordable moving solutions.
@@ -51,32 +53,38 @@ const Footer = () => {
             <h4 className="font-display text-xl font-bold mb-6">Our Services</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#services" className="font-body text-gray-300 hover:text-brand-orange transition-colors duration-300">
+                <a href="/home-shifting" className="font-body text-gray-300 hover:text-brand-orange transition-colors duration-300 flex items-center gap-1 group">
+                  <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                   Home Shifting
                 </a>
               </li>
               <li>
-                <a href="#services" className="font-body text-gray-300 hover:text-brand-orange transition-colors duration-300">
+                <a href="/office-relocation" className="font-body text-gray-300 hover:text-brand-orange transition-colors duration-300 flex items-center gap-1 group">
+                  <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                   Office Relocation
                 </a>
               </li>
               <li>
-                <a href="#services" className="font-body text-gray-300 hover:text-brand-orange transition-colors duration-300">
+                <a href="/packing-services" className="font-body text-gray-300 hover:text-brand-orange transition-colors duration-300 flex items-center gap-1 group">
+                  <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                   Packing Services
                 </a>
               </li>
               <li>
-                <a href="#services" className="font-body text-gray-300 hover:text-brand-orange transition-colors duration-300">
+                <a href="/local-transport" className="font-body text-gray-300 hover:text-brand-orange transition-colors duration-300 flex items-center gap-1 group">
+                  <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                   Local Transport
                 </a>
               </li>
               <li>
-                <a href="#services" className="font-body text-gray-300 hover:text-brand-orange transition-colors duration-300">
+                <a href="/loading-unloading" className="font-body text-gray-300 hover:text-brand-orange transition-colors duration-300 flex items-center gap-1 group">
+                  <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                   Loading & Unloading
                 </a>
               </li>
               <li>
-                <a href="#services" className="font-body text-gray-300 hover:text-brand-orange transition-colors duration-300">
+                <a href="/storage-solutions" className="font-body text-gray-300 hover:text-brand-orange transition-colors duration-300 flex items-center gap-1 group">
+                  <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                   Storage Solutions
                 </a>
               </li>
@@ -88,32 +96,38 @@ const Footer = () => {
             <h4 className="font-display text-xl font-bold mb-6">Quick Links</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#about" className="font-body text-gray-300 hover:text-brand-orange transition-colors duration-300">
+                <a href="/about" className="font-body text-gray-300 hover:text-brand-orange transition-colors duration-300 flex items-center gap-1 group">
+                  <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#services" className="font-body text-gray-300 hover:text-brand-orange transition-colors duration-300">
+                <a href="/services" className="font-body text-gray-300 hover:text-brand-orange transition-colors duration-300 flex items-center gap-1 group">
+                  <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                   Our Services
                 </a>
               </li>
               <li>
-                <a href="#areas" className="font-body text-gray-300 hover:text-brand-orange transition-colors duration-300">
+                <a href="/service-areas" className="font-body text-gray-300 hover:text-brand-orange transition-colors duration-300 flex items-center gap-1 group">
+                  <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                   Service Areas
                 </a>
               </li>
               <li>
-                <a href="#testimonials" className="font-body text-gray-300 hover:text-brand-orange transition-colors duration-300">
+                <a href="/testimonials" className="font-body text-gray-300 hover:text-brand-orange transition-colors duration-300 flex items-center gap-1 group">
+                  <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                   Testimonials
                 </a>
               </li>
               <li>
-                <a href="#quote-form" className="font-body text-gray-300 hover:text-brand-orange transition-colors duration-300">
+                <a href="/get-quote" className="font-body text-gray-300 hover:text-brand-orange transition-colors duration-300 flex items-center gap-1 group">
+                  <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                   Get Quote
                 </a>
               </li>
               <li>
-                <a href="#contact" className="font-body text-gray-300 hover:text-brand-orange transition-colors duration-300">
+                <a href="/contact" className="font-body text-gray-300 hover:text-brand-orange transition-colors duration-300 flex items-center gap-1 group">
+                  <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                   Contact Us
                 </a>
               </li>

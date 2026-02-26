@@ -11,6 +11,61 @@
       "x": 0,
       "y": 0,
       "zIndex": 0
+    },
+    {
+      "id": "2781f06c-0bd8-4dc1-865b-d3e0c3df9c0f",
+      "type": "COMPONENT",
+      "importPath": "./ServicesPage-2781f06c.tsx",
+      "name": "ServicesPage",
+      "width": 1440,
+      "height": 900,
+      "x": 0,
+      "y": 0,
+      "zIndex": 10
+    },
+    {
+      "id": "ddd9e144-184e-48d6-820d-bcb6b27f1b5f",
+      "type": "COMPONENT",
+      "importPath": "./HomeShiftingPreview-ddd9e144.tsx",
+      "name": "HomeShiftingPreview",
+      "width": 1440,
+      "height": 900,
+      "x": 0,
+      "y": 0,
+      "zIndex": 20
+    },
+    {
+      "id": "8d72a457-3765-4a80-a080-a129aeba5dc8",
+      "type": "COMPONENT",
+      "importPath": "./OurServicesPreview-8d72a457.tsx",
+      "name": "OurServicesPreview",
+      "width": 1440,
+      "height": 900,
+      "x": 1500,
+      "y": 0,
+      "zIndex": 30
+    },
+    {
+      "id": "5ac6ea28-4e42-4cc8-b5e5-3d9a8dfa036f",
+      "type": "COMPONENT",
+      "importPath": "./AboutUsPreview-5ac6ea28.tsx",
+      "name": "AboutUsPreview",
+      "width": 1440,
+      "height": 900,
+      "x": 3000,
+      "y": 0,
+      "zIndex": 40
+    },
+    {
+      "id": "7e95a6f9-0056-47fb-9cdd-a0ab132b951c",
+      "type": "COMPONENT",
+      "importPath": "./ContactUsPreview-7e95a6f9.tsx",
+      "name": "ContactUsPreview",
+      "width": 1440,
+      "height": 900,
+      "x": 0,
+      "y": 960,
+      "zIndex": 50
     }
   ],
   "config_version": "1.0.0"
